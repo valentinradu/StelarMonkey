@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B016685C1E54FD7A00B95711 /* PocketSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B016685B1E54FD7A00B95711 /* PocketSVG.framework */; };
 		B08877AB1DCB722E00741FAC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08877AA1DCB722E00741FAC /* main.swift */; };
-		B08877B31DCB742C00741FAC /* PocketSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08877B21DCB742C00741FAC /* PocketSVG.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,9 +24,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B016685B1E54FD7A00B95711 /* PocketSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PocketSVG.framework; path = "Dependencies/PocketSVG/build/Debug-iphoneos/PocketSVG.framework"; sourceTree = "<group>"; };
 		B08877A71DCB722E00741FAC /* SvgToCoreGraphics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SvgToCoreGraphics; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08877AA1DCB722E00741FAC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		B08877B21DCB742C00741FAC /* PocketSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PocketSVG.framework; path = Dependencies/PocketSVG/build/Debug/PocketSVG.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B08877B31DCB742C00741FAC /* PocketSVG.framework in Frameworks */,
+				B016685C1E54FD7A00B95711 /* PocketSVG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +69,7 @@
 		B08877B11DCB742C00741FAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B08877B21DCB742C00741FAC /* PocketSVG.framework */,
+				B016685B1E54FD7A00B95711 /* PocketSVG.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,6 +106,7 @@
 				TargetAttributes = {
 					B08877A61DCB722E00741FAC = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = YEBVWK4Z2W;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -230,9 +231,12 @@
 		B08877AF1DCB722E00741FAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = YEBVWK4Z2W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/PocketSVG/build/Debug",
+					"$(PROJECT_DIR)/Dependencies/PocketSVG/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -242,9 +246,12 @@
 		B08877B01DCB722E00741FAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = YEBVWK4Z2W;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Dependencies/PocketSVG/build/Debug",
+					"$(PROJECT_DIR)/Dependencies/PocketSVG/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

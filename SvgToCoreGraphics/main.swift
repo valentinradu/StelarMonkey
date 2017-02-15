@@ -17,9 +17,6 @@ let arguments = CommandLine.arguments
 guard arguments.count > 1
 else {throw "You need to have at least one SVG to convert (0 arguments given)"}
 
-guard let currentDirectoryURL = URL(string:FileManager.default.currentDirectoryPath)
-else {throw "Failed to get the current directory url"}
-
 for path in arguments.dropFirst() {
     
     let url = URL(fileURLWithPath:path)
@@ -27,7 +24,8 @@ for path in arguments.dropFirst() {
     _ = try url.checkResourceIsReachable()
     
     let name = url.deletingPathExtension().lastPathComponent
-    let layerFileURL = currentDirectoryURL.appendingPathComponent(name + ".layer")
+    let dir = url.deletingLastPathComponent()
+    let layerFileURL = dir.appendingPathComponent(name + ".layer")
     
     
     let rootLayer = CALayer()
