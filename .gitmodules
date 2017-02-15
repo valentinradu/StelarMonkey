@@ -1,0 +1,3 @@
+[submodule "Dependencies/PocketSVG"]
+	path = Dependencies/PocketSVG
+	url = https://github.com/pocketsvg/PocketSVG.git

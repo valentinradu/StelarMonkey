@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B08877AB1DCB722E00741FAC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08877AA1DCB722E00741FAC /* main.swift */; };
+		B08877B31DCB742C00741FAC /* PocketSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08877B21DCB742C00741FAC /* PocketSVG.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		B08877A71DCB722E00741FAC /* SvgToCoreGraphics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SvgToCoreGraphics; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08877AA1DCB722E00741FAC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B08877B21DCB742C00741FAC /* PocketSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PocketSVG.framework; path = Dependencies/PocketSVG/build/Debug/PocketSVG.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08877B31DCB742C00741FAC /* PocketSVG.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			children = (
 				B08877A91DCB722E00741FAC /* SvgToCoreGraphics */,
 				B08877A81DCB722E00741FAC /* Products */,
+				B08877B11DCB742C00741FAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +64,14 @@
 				B08877AA1DCB722E00741FAC /* main.swift */,
 			);
 			path = SvgToCoreGraphics;
+			sourceTree = "<group>";
+		};
+		B08877B11DCB742C00741FAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B08877B21DCB742C00741FAC /* PocketSVG.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +230,10 @@
 		B08877AF1DCB722E00741FAC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/PocketSVG/build/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -226,6 +242,10 @@
 		B08877B01DCB722E00741FAC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Dependencies/PocketSVG/build/Debug",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -250,6 +270,7 @@
 				B08877B01DCB722E00741FAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
