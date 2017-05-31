@@ -36,8 +36,25 @@ for path in arguments.dropFirst() {
         let layer = CAShapeLayer()
         layer.path = vector.cgPath
         
+        
+//        layer.path?.apply(info: nil) { (_, elementPointer) in
+//            let element = elementPointer.pointee
+//            let command: String
+//            let pointCount: Int
+//            switch element.type {
+//            case .moveToPoint: command = "moveTo"; pointCount = 1
+//            case .addLineToPoint: command = "lineTo"; pointCount = 1
+//            case .addQuadCurveToPoint: command = "quadCurveTo"; pointCount = 2
+//            case .addCurveToPoint: command = "curveTo"; pointCount = 3
+//            case .closeSubpath: command = "close"; pointCount = 0
+//            }
+//            let points = Array(UnsafeBufferPointer(start: element.points, count: pointCount))
+//            print("\(command) \(points)")
+//        }
+        
         //I hate the as! but it seems Swift 3 is still buggy
         layer.fillColor = vector.svgAttributes["fill"] as! CGColor?
+        layer.fillRule = kCAFillRuleEvenOdd
         
         rootLayer.addSublayer(layer)
         
